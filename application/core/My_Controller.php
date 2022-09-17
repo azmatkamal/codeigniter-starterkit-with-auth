@@ -12,9 +12,9 @@ class My_Controller extends CI_Controller
     }
 
     public function load_private_view($file_name, $options, $data = array()) {
-        // if(!$this->logged_in()) {
-        //     redirect('logout');
-        // }
+        if(!$this->logged_in()) {
+            redirect('logout');
+        }
 
         $this->load->view('private/layout', [
             'file_name' => $file_name,

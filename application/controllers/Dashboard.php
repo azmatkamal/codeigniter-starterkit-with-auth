@@ -6,7 +6,7 @@ class Dashboard extends My_Controller {
     function __construct() {
         parent::__construct();
 		
-		// if(!$this->logged_in()) redirect('login');
+		if(!$this->logged_in()) redirect('login');
     }
 
 	public function index()
