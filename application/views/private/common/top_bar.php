@@ -37,7 +37,7 @@
 
             <!--begin: Navigation -->
             <div class="kt-notification">
-                <a href="#" class="kt-notification__item">
+                <a href="<?php echo base_url(); ?>profile" class="kt-notification__item">
                     <div class="kt-notification__item-icon">
                         <i class="flaticon2-calendar-3 kt-font-success"></i>
                     </div>

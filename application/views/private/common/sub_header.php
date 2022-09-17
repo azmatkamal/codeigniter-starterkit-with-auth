@@ -6,5 +6,10 @@
         <span class="kt-subheader__separator kt-hidden"></span>
     </div>
 </div>
+<?php 
+    if ($this->session->flashdata('notification')) {
+        echo $this->session->flashdata('notification');
+    }
+?>
 
 <!-- end:: Subheader -->
