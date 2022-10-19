@@ -36,6 +36,10 @@
                             <i class="kt-menu__link-icon flaticon-home"></i>
                             <span class="kt-menu__link-text">Dashboard</span>
                         </a>
+                        <a href="<?php echo base_url(); ?>feeds" class="kt-menu__link ">
+                            <i class="kt-menu__link-icon flaticon-list"></i>
+                            <span class="kt-menu__link-text">Feeds</span>
+                        </a>
                     </li>
                 </ul>
             </div>
