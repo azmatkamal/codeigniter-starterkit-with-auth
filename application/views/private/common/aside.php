@@ -40,6 +40,26 @@
                             <i class="kt-menu__link-icon flaticon-list"></i>
                             <span class="kt-menu__link-text">Feeds</span>
                         </a>
+                        <li class="kt-menu__item kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                            <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                <i class="kt-menu__link-icon flaticon-users"></i>
+                                <span class="kt-menu__link-text">Users</span>
+                                <i class="kt-menu__ver-arrow la la-angle-right"></i>
+                            </a>
+                            <div class="kt-menu__submenu " kt-hidden-height="80" style=""><span class="kt-menu__arrow"></span>
+                                <ul class="kt-menu__subnav">
+                                    <?php if(is_admin()): ?>
+                                        <li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo base_url(); ?>users/new" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">New User</span></a></li>
+                                        <li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo base_url(); ?>users/admins" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Admins</span></a></li>
+                                        <li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo base_url(); ?>users/employee" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Employees</span></a></li>
+                                    <?php endif; ?>
+                                    <?php if(is_employee()): ?>
+                                        <li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo base_url(); ?>users/new" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">New Client</span></a></li>
+                                        <li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo base_url(); ?>users/client" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Clients</span></a></li>
+                                    <?php endif; ?>
+                                </ul>
+                            </div>
+                        </li>
                     </li>
                 </ul>
             </div>

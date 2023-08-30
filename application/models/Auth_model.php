@@ -3,7 +3,7 @@
     class Auth_model extends CI_Model {
 
         public function login_user($data) {
-            $this->db->select('users.*')->from('users')->where("(users.email = '".$data['email']."' OR users.username = '".$data['email']."')")->where('password', $data['password'])->where('email_verified', $data['email_verified']);
+            $this->db->select('users.*')->from('users')->where("(users.email = '".$data['email']."' OR users.username = '".$data['email']."')")->where('password', $data['password'])->where('email_verified', $data['email_verified'])->where('is_active', '1')->where('is_deleted', '0');
 
             $result = $this->db->get();
 
