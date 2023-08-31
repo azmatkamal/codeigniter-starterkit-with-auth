@@ -79,7 +79,7 @@ class Users extends My_Controller {
 			$data['email'] = $email;
 			$data['password'] = md5($this->generateRandomString(10));
 			$data['user_type'] = $user_type;
-			$data['recover_email_token'] = $this->generateRandomString(20);
+			$data['recover_email_token'] = md5($this->generateRandomString(50));
 
 			if($this->Common_model->add('users', $data) > 0) {
                 $code = $data['recover_email_token'];
