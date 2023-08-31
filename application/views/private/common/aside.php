@@ -36,10 +36,10 @@
                             <i class="kt-menu__link-icon flaticon-home"></i>
                             <span class="kt-menu__link-text">Dashboard</span>
                         </a>
-                        <a href="<?php echo base_url(); ?>feeds" class="kt-menu__link ">
+                        <!-- <a href="<?php echo base_url(); ?>feeds" class="kt-menu__link ">
                             <i class="kt-menu__link-icon flaticon-list"></i>
                             <span class="kt-menu__link-text">Feeds</span>
-                        </a>
+                        </a> -->
                         <li class="kt-menu__item kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
                             <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
                                 <i class="kt-menu__link-icon flaticon-users"></i>

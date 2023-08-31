@@ -47,7 +47,7 @@
                 'recover_email_token' => $recover_email_token,
             ));
 
-            if($this->db->update('users', array('recover_email_token' => '', 'email_verified' => '1', 'password' => md5(trim($password))))) {
+            if($this->db->update('users', array('recover_email_token' => '', 'email_verified' => '1', 'password' => md5($password)))) {
                 return $this->db->where('email', $email)->get('users')->row(0);
             }
             return false;

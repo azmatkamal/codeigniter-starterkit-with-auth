@@ -6,7 +6,7 @@
 
 		<!--end::Base Path -->
 		<meta charset="utf-8" />
-		<title><?php echo $title ?? 'Login'; ?></title>
+		<title><?php echo $title ?? 'Reset Password'; ?></title>
 		<meta name="description" content="Login page example">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -64,7 +64,7 @@
 							</div>
 							<div class="kt-login__signin">
 								<div class="kt-login__head">
-									<h3 class="kt-login__title">Sign In To Admin</h3>
+									<h3 class="kt-login__title">Reset Password</h3>
 								</div>
 								<?php 
 									if ($this->session->flashdata('notification')) {
@@ -72,21 +72,20 @@
 									}
 								?>
 								<form class="kt-form" action="" method="post">
-									<div class="input-group">
-										<input class="form-control" type="text" placeholder="Email or Username" name="email" autocomplete="off">
-									</div>
-                                    <span class="text-danger"><?php echo form_error('email'); ?></span>
-									<div class="input-group">
-										<input class="form-control" type="password" placeholder="Password" name="password">
-									</div>
-                                    <span class="text-danger"><?php echo form_error('password'); ?></span>
-									<div class="row kt-login__extra">
-										<div class="col kt-align-right">
-											<a href="<?php echo base_url(); ?>reset-password" id="kt_login_forgot" class="kt-login__link">Forget Password ?</a>
-										</div>
-									</div>
+                                    <div class="form-group">
+                                        <input type="email" required class="form-control" name="email" value="<?php echo set_value('email'); ?>" placeholder="Your E-mail">
+                                        <span class="text-error"><?php echo form_error('email'); ?></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" required class="form-control" name="password" placeholder="New Password">
+                                        <span class="text-error"><?php echo form_error('password'); ?></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" required class="form-control" name="password2" placeholder="Confirm New Password">
+                                        <span class="text-error"><?php echo form_error('password2'); ?></span>
+                                    </div>
 									<div class="kt-login__actions">
-										<button id="kt_login_signin_submit" class="btn btn-brand btn-pill kt-login__btn-primary">Sign In</button>
+										<button id="kt_login_signin_submit" class="btn btn-brand btn-pill kt-login__btn-primary">Reset Now</button>
 									</div>
 								</form>
 							</div>

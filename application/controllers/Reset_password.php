@@ -24,8 +24,7 @@ class Reset_password extends My_Controller {
 
             if(isset($user) && !empty($user) && $user->email==trim($email)) {
                 $this->reset_password_email(
-                    $email, 
-                    $user->first_name . ' ' . $user->last_name, 
+                    $email,
                     $recover_email_token
                 );
 
@@ -62,16 +61,19 @@ class Reset_password extends My_Controller {
       
             if(isset($user) && !empty($user) && $user->email==trim($email)) {
                 $message = "Password recovered successfully. You can log in now.";
+                $subject = 'Password Changed Successfully :: All Care Portal';
                 $this->reset_password_email(
                     $email, 
-                    $user->first_name . ' ' . $user->last_name, 
                     $recover_email_token,
+                    $subject,
                     $message
                 );
-
-                redirect('login');
+                $this->session->set_flashdata('notification','<div class="alert alert-success" role="alert">
+					Password changed successfully. You can login now.
+				</div>');
             }
-            redirect('reset-password');
+
+            redirect('login');
         }		
     }
 }

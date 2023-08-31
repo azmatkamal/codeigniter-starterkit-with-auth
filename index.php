@@ -1,4 +1,8 @@
 <?php
+
+define('EMAIL_FROM', 'no-reply@azmatkamal.com');
+define('EMAIL_FROM_EMAIL', 'All Care Portal');
+define('EMAIL_REPLY_TO', 'no-reply@azmatkamal.com');
 /**
  * CodeIgniter
  *
@@ -54,7 +58,6 @@
  * NOTE: If you change these, also change the error_reporting() code below
  */
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
-
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -312,4 +315,7 @@ switch (ENVIRONMENT)
  *
  * And away we go...
  */
+
+require 'vendor/autoload.php';
+
 require_once BASEPATH.'core/CodeIgniter.php';
